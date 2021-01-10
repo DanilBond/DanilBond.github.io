@@ -4,12 +4,27 @@ var Radions1 = document.getElementsByClassName("radios1");
 var bgText = document.getElementById("BGtext");
 var mover = document.getElementById("mover");
 var shadow = "";
+var ScrollID;
 
 var scrollVal = 0;
 var scrollHeigth = '1000px';
 var scrollHeigthInt = 1000;
 
+function ArrowScroll(id){
+  if(id === "Left"){
+    if(ScrollID <= 1){
+ Scroll(ScrollID+1);
+    }
+  }
+  else{
+    if(ScrollID >= 1){
+    Scroll(ScrollID-1);
+    }
+  }
+}
+
 function Scroll(id){
+  ScrollID = id;
  switch(id){
    case 0:
    for(var i = 0; i < Radions1.length; i++){
@@ -53,7 +68,7 @@ document.body.style.setProperty('--scrollHeigth',scrollHeigth);
 GetScrollAndApplyTransform();
 function GetScrollAndApplyTransform(){
     
-    
+    Scroll(0);
     scrollVal = (window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
   
     if(scrollVal <= 1){
