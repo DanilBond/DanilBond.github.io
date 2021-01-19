@@ -1,13 +1,13 @@
 
-var HeaderTxts = document.getElementsByClassName("HeaderText");
-var Radions1 = document.getElementsByClassName("radios1");
-var bgText = document.getElementById("BGtext");
-var shadow = "";
-var ScrollID;
+let HeaderTxts = document.getElementsByClassName("HeaderText");
+let Radions1 = document.getElementsByClassName("radios1");
+let bgText = document.getElementById("BGtext");
+let shadow = "";
+let ScrollID;
 
-var scrollVal = 0;
-var scrollHeigth = '1000px';
-var scrollHeigthInt = 1000;
+let scrollVal = 0;
+let scrollHeigth = '1000px';
+let scrollHeigthInt = 1000;
 
 
 
@@ -23,7 +23,7 @@ function GetScrollAndApplyTransform(){
     
         document.body.style.setProperty('--scroll',scrollVal);
     shadow = '';
-    for (var i = 0; i < 30; i++) {
+    for (let i = 0; i < 30; i++) {
         shadow += (shadow ? "," : "") + -i * scrollVal + "px " + i * scrollVal + "px 0 #363457";
       }
       bgText.style.textShadow = shadow;
@@ -33,7 +33,7 @@ function GetScrollAndApplyTransform(){
         
         document.body.style.setProperty('--scroll',1);
         shadow = '';
-        for (var i = 0; i < 30; i++) {
+        for (let i = 0; i < 30; i++) {
             shadow += (shadow ? "," : "") + -i * 1 + "px " + i * 1 + "px 0 #363457";
           }
           bgText.style.textShadow = shadow;
@@ -53,7 +53,7 @@ window.addEventListener('scroll', () => {
         document.body.style.setProperty('--scroll',scrollVal);
     shadow = '';
     bgText.style = "";
-    for (var i = 0; i < 30; i++) {
+    for (let i = 0; i < 30; i++) {
         shadow += (shadow ? "," : "") + -i * scrollVal + "px " + i * scrollVal + "px 0 #363457";
       }
       
@@ -67,7 +67,7 @@ window.addEventListener('scroll', () => {
 
     //HEADER_BEGIN
     if(scrollVal > 0.01){
-      for(var i = 0; i < HeaderTxts.length; i++){
+      for(let i = 0; i < HeaderTxts.length; i++){
         HeaderTxts[i].classList.remove("None");
         HeaderTxts[i].classList.remove("FadeIn");
         HeaderTxts[i].classList.remove("FadeOut");
@@ -75,7 +75,7 @@ window.addEventListener('scroll', () => {
       }
     }
     else if(scrollVal < 0.001){
-      for(var i = 0; i < HeaderTxts.length; i++){
+      for(let i = 0; i < HeaderTxts.length; i++){
         HeaderTxts[i].classList.remove("None");
         HeaderTxts[i].classList.remove("FadeIn");
         HeaderTxts[i].classList.remove("FadeOut");
