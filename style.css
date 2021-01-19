@@ -101,6 +101,7 @@ font-size: 27px;
 text-shadow: 0px 0px 10px rgba(150, 150, 150, 1);
 }
 .GameCards a{
+  
   padding: 15px 35px;
   border-radius: 20px 5px;
   background-color: #574aea;
@@ -121,7 +122,13 @@ text-shadow: 0px 0px 10px rgba(150, 150, 150, 1);
   position: relative;
   margin: 0 50px;
 }
+.GameCards .textContainer{
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+}
 .GameCards p{
+  position: fixed;
   margin: 30px auto;
   color: white;
   line-height: 25px;
@@ -143,12 +150,20 @@ text-shadow: 0px 0px 10px rgba(150, 150, 150, 1);
 .GameCards .container .card{
   position: relative;
  width: 350px;
- height: 525px;
+ height: 545px;
  background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 border-radius: 40px 10px;
 backdrop-filter: blur(10px);
+transition: border-radius;
+transition-duration: .2s;
 }
+.GameCards .container .card:hover{
+transition: border-radius;
+transition-duration: .2s;
+border-radius: 40px;
+}
+
 
 /* Animation */
 @keyframes rotate {
@@ -157,7 +172,7 @@ backdrop-filter: blur(10px);
     opacity: 0.3;
   }
 }
-.
+
 
 
 @keyframes FadeIn{
