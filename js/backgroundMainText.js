@@ -1,8 +1,7 @@
-var Windows = document.getElementsByClassName("Window");
+
 var HeaderTxts = document.getElementsByClassName("HeaderText");
 var Radions1 = document.getElementsByClassName("radios1");
 var bgText = document.getElementById("BGtext");
-var mover = document.getElementById("mover");
 var shadow = "";
 var ScrollID;
 
@@ -10,70 +9,18 @@ var scrollVal = 0;
 var scrollHeigth = '1000px';
 var scrollHeigthInt = 1000;
 
-function ArrowScroll(id){
-  if(id === "Left"){
-    if(ScrollID <= 1){
- Scroll(ScrollID+1);
-    }
-  }
-  else{
-    if(ScrollID >= 1){
-    Scroll(ScrollID-1);
-    }
-  }
-}
 
-function Scroll(id){
-  ScrollID = id;
- switch(id){
-   case 0:
-   for(var i = 0; i < Radions1.length; i++){
-     if(i != 0){
-       Radions1[i].checked = false;
-     }
-     else{
-      Radions1[i].checked = true;
-     }
-   }
-   mover.style.transform = "translateX(100px)";
-   break;
 
-   case 1:
-   for(var i = 0; i < Radions1.length; i++){
-     if(i != 1){
-       Radions1[i].checked = false;
-     }
-     else{
-      Radions1[i].checked = true;
-     }
-   }
-   mover.style.transform = "translateX(-400px)";
-   break;
-
-   case 2:
-    for(var i = 0; i < Radions1.length; i++){
-      if(i != 2){
-        Radions1[i].checked = false;
-      }
-      else{
-       Radions1[i].checked = true;
-      }
-    }
-    mover.style.transform = "translateX(-900px)";
-    break;
- }
-}
 
 document.body.style.setProperty('--scrollHeigth',scrollHeigth);
 GetScrollAndApplyTransform();
 function GetScrollAndApplyTransform(){
     
-    Scroll(0);
+   
     scrollVal = (window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
   
     if(scrollVal <= 1){
-      Windows[0].style.webkitAnimationPlayState = "paused";
-        Windows[1].style.webkitAnimationPlayState = "paused";
+    
         document.body.style.setProperty('--scroll',scrollVal);
     shadow = '';
     for (var i = 0; i < 30; i++) {
@@ -115,11 +62,7 @@ window.addEventListener('scroll', () => {
     //TEXT_END
     
     //OURGAMES_BEGIN
-    if(scrollVal >= 2.1){
-      Windows[0].style.webkitAnimationPlayState = "running";
-      Windows[1].style.webkitAnimationPlayState = "running";
-    }
-    console.log(scrollVal);
+
     //OURGAMES_END
 
     //HEADER_BEGIN

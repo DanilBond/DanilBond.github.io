@@ -81,142 +81,75 @@ header{
    animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 }
-.Window{
-  display: flex;
-  z-index: 1000;
-  background-color: #222831;
-  border-radius: 25px;
-  width: 600px;
-  height: 600px;
-  opacity: 0.8;
-}
-.W1{
-  display: flex;
-  justify-self: flex-start;
-  align-items: flex-start;
-  margin: 0 auto;
 
-    animation-name: ourgames2;
-    animation-duration: 1s;
-}
-.W2{
+.GameCards{
+  margin-top: 1100px;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin: 0 auto;
-
-  animation-name: ourgames1;
-  animation-duration: 1s;
-
-}
-.WindowParent{
-  margin-top: 1105px;
-  width: 100%;
-  display: flex;
-  overflow: hidden;
-}
-.WindowImgBG{
-  margin-right: 100px;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
- 
-}
-.WindowImgBG img{
-  border-radius: 25px;
-}
-.WindowImgBG h2{
-  margin-top: 25px;
-  color: #ffa200;
-  
-}
-.WindowImgBG h3{
-  margin-top: 25px;
-  color: #d18c14;
+  flex-wrap: wrap;
   text-align: center;
-  width: 400px;
 }
-.WindowImgBG a{
-  margin-top: 40px;
-  font-weight: 500;
-  text-decoration: none;
-  color: aqua;
-  font-size: 25px;
-  border: 2px solid aqua;
-  padding: 10px 15px;
-  border-radius: 25px;
-  transition: background-color color;
-  transition-duration: 0.5s;
-  
-}
-.WindowImgBG a:hover{
-  transition: background-color color;
-  transition-duration: 0.5s;
-  background-color: aqua;
-  color: black;
-}
-.WIBGParent{
-  display: flex;
-  overflow: hidden;
-  
-}
-.Mover{
-  display: flex;
-  transform: translateX(100px);
-  justify-content: center;
-  align-items: center;
-}
-.Slider{
-  display: flex;
-  position: absolute;
-  margin: 550px 240px;
-  
-  justify-content: center;
-  align-items: center;
-}
-.Slider ul {
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.Slider ul li{
-  margin: 0px 10px;
+.GameCards li{
   list-style-type: none;
 }
-.S1{
-  width: 250px;
+.GameCards h3{
+  padding-top: 25px;
+  color: white;
+font-weight: 700;
+font-size: 27px;
+text-shadow: 0px 0px 10px rgba(150, 150, 150, 1);
 }
-.radios1{
-  width: 18px;
-  height: 18px;
+.GameCards a{
+  padding: 15px 35px;
+  border-radius: 20px 5px;
+  background-color: #574aea;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  transition: background-color border-radius;
+  transition-duration: .3s;
 }
-.ArrowParent{
-  position: absolute;
- 
+.GameCards a:hover{
+  transition: background-color border-radius;
+  transition-duration: .3s;
+  border-radius: 5px 20px;
+  background-color: #3725ff;
+}
+.GameCards section{
+  position: relative;
+  margin: 0 50px;
+}
+.GameCards p{
+  margin: 30px auto;
+  color: white;
+  line-height: 25px;
+  width: 300px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(150, 150, 150, 1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 50px;
+}
+.GameCards .imgBx{
+  padding-top: 40px;
   
 }
-.ArrowParent .ArrowLeft img{
-  width: 50px;
-  height: 75px;
-  margin-left: 20px;
-  opacity: 0.5;
-  position: absolute;
-  margin-top: 250px;
+.GameCards .imgBx img{
+  border-radius: 25px 10px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 1);
 }
-.ArrowParent .ArrowRight img{
-  width: 50px;
-  height: 75px;
-  margin-left: 525px;
-  position: absolute;
-  margin-top: 250px;
-  transform: rotateY(180deg);
-  opacity: 0.5;
+.GameCards .container .card{
+  position: relative;
+ width: 350px;
+ height: 525px;
+ background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+border-radius: 40px 10px;
+backdrop-filter: blur(10px);
 }
+
 /* Animation */
 @keyframes rotate {
   to {
@@ -224,33 +157,8 @@ header{
     opacity: 0.3;
   }
 }
+.
 
-@keyframes ourgames1{
-  0%{
-    transform: translateY(600px);
-    transform: translateX(1000px);
-    display: none;
-    opacity: 0.1;
-  }
-  100%{
-    transform: translateY(600px);
-    transform: translateX(0px);
-    display: block;
-    opacity: 0.8;
-  }
-}
-@keyframes ourgames2{
-  0%{
-    transform: translateY(600px);
-    transform: translateX(-1000px);
-    opacity: 0.1;
-  }
-  100%{
-    transform: translateY(600px);
-    transform: translateX(0px);
-    opacity: 0.8;
-  }
-}
 
 @keyframes FadeIn{
   0%{
