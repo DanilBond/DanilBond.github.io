@@ -1,203 +1,62 @@
-:root {
-  --scrollHeigth: 1000px;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-}
-.None{
-  animation-name: None;
-  animation-duration: 0.001s;
-  opacity: 0;
-}
-.FadeIn{
-  animation-name: FadeIn;
-  animation-duration: 0.5s;
-  opacity: 1;
-}
-.FadeOut{
-  animation-name: FadeOut;
-  animation-duration: 0.5s;
-  opacity: 0;
-}
-body {
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #2c061f;
-  
-  height: calc(var(--scrollHeigth) * 1);
-}
-
-header{
-  width: 100%;
-  position: fixed;
-  top: 25px;
-  display: flex;
-  justify-content: center;
-}
-.Header ul{
-  display: flex;
-  
- 
-}
-.Header li {
-  
-  margin: 0 15px;
-  list-style-type: none;
-}
-.Header li a{
-  
-  border-bottom: 5px solid #d8911600;
-  transition: border-bottom;
-  transition-duration: 0.5s;
-  text-decoration: none;
-  font-weight: 700;
-  color: #e79e4f;
-  font-size: 20px;
-}
-.Header li a:hover{
-  border-bottom: 5px solid #d89216;
-  transition: border-bottom;
-  transition-duration: 0.5s;
-}
-#BGtext{
-  user-select: none;
-  position: fixed;
-  color: #d89216;
-  opacity: 1;
-  font-weight: 700;
-  font-size: 12em;
-  line-height: 0.9em;
-  letter-spacing: 2px;
-  text-align: center;
-  margin-bottom: 250px;
-   animation: rotate 1s linear infinite;
-
-   animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-}
-
-.GameCards{
-  margin-top: 1100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
-.GameCards li{
-  list-style-type: none;
-}
-.GameCards h3{
-  padding-top: 25px;
-  color: white;
-font-weight: 700;
-font-size: 27px;
-text-shadow: 0px 0px 10px rgba(150, 150, 150, 1);
-}
-.GameCards a{
-  
-  padding: 15px 35px;
-  border-radius: 20px 5px;
-  background-color: #574aea;
-  font-weight: 700;
-  font-size: 20px;
-  color: white;
-  text-decoration: none;
-  transition: background-color border-radius;
-  transition-duration: .3s;
-}
-.GameCards a:hover{
-  transition: background-color border-radius;
-  transition-duration: .3s;
-  border-radius: 5px 20px;
-  background-color: #3725ff;
-}
-.GameCards section{
-  position: relative;
-  margin: 0 50px;
-}
-.GameCards .textContainer{
-  margin: 0 auto;
-  width: 300px;
-  height: 200px;
-}
-.GameCards p{
-  position: fixed;
-  margin: 30px auto;
-  color: white;
-  line-height: 25px;
-  width: 300px;
-  text-align: center;
-  text-shadow: 0px 0px 10px rgba(150, 150, 150, 1);
+html, body {
   overflow: hidden;
-  text-overflow: ellipsis;
-  
+    margin: 0;
+    height: 100%;
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgb(56,27,128);
+    background: radial-gradient(circle, rgba(56,27,128,1) 0%, rgba(20,7,50,1) 100%);
 }
-.GameCards .imgBx{
-  padding-top: 40px;
-  
-}
-.GameCards .imgBx img{
-  border-radius: 25px 10px;
-  box-shadow: 0px 15px 30px rgba(0, 0, 0, 1);
-}
-.GameCards .container .card{
+
+.Controls{
   position: relative;
- width: 350px;
- height: 545px;
- background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-border-radius: 40px 10px;
-backdrop-filter: blur(10px);
-transition: border-radius;
-transition-duration: .2s;
+  z-index: 1;
+  margin:-550px 1050px;
+  
+  
+  background: rgb(67,27,128);
+  background: linear-gradient(180deg, rgba(67,27,128,1) 0%, rgba(36,2,87,1) 100%);
+  border: white solid;
+  border-radius: 20px;
+  width: 250px;
+  height: 350px;
 }
-.GameCards .container .card:hover{
-transition: border-radius;
-transition-duration: .2s;
-border-radius: 40px;
+.Controls .CPan1{
+  height: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
-
-
-/* Animation */
-@keyframes rotate {
-  to {
-    transform: rotate(-28deg) skew(25deg);
-    opacity: 0.3;
-  }
+.Controls .CPan1 span{
+  margin: 0 50px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
 }
-
-
-
-@keyframes FadeIn{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
+.Controls .CPan1 button{
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(255, 255, 255);
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
 }
-@keyframes FadeOut{
-  0%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
+.CPanLabel{
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
-
-@keyframes None{
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 0;
-  }
-}
-/* Animation */

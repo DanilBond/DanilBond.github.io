@@ -1,100 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./arrow.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
-  </head>
-  <header>
-    <div class="Header">
-      <ul>
-        <li><a href="#" class="HeaderText None">Games</a></li>
-        <li><a href="#" class="HeaderText None">Publish</a></li>
-        <li><a href="#" class="HeaderText None">Roadmap</a></li>
-        <li><a href="#" class="HeaderText None">About</a></li>
-      </ul>
-    </div>
-  </header>
-  <body>
-    <div id="BGtext">SOS
-      <div>GAMES</div>
-    </div>
+</head>
+<body>
    
-    <div class="GameCards">
-      <div class="center-con cc1" onclick="rightArrow()">
-        <div class="round">
-            <span></span>
-            <span></span>
+    <div class="Controls">
+        <div class="CPan1">
+            <div class="CPanLabel">
+            <button id="StepP"><</button>
+            <span id="StepTxt">Full</span>
+            <button id="StepM">></button>
+        </div>
+            <div class="CPanLabel">
+            <button id="DetailP"><</button>
+            <span id="DetailTxt">Detail</span>
+            <button id="DetailM">></button>
+        </div>
         </div>
     </div>
+
+    <canvas></canvas>
     
-      <section>
-        <div class="container">
-          <div class="card">
-            <div class="content">
-              <h3 class="GTITLE">А4 убеги от зомби</h3>
-              <div class="imgBx"><img class="GIMG" src="./img/gameA4.webp" alt=""></div>
-              <div class="containerBx">
-                <div class="textContainer">
-                <p class="GDESC">А4 решил записать опасное видео что бы на него подписалось много человек! Помогу ему записать видео и собрать лайки при этом не дай ему умереть!!!</p>
-                </div>
-              </div>
-            </div>
-            <a class="GBUTTON" href="https://play.google.com/store/apps/details?id=com.SosGames.A4">Download</a>
-            
-          </div>
-          
-        </div>
-      </section>
-    <section>
-      <div class="container">
-        <div class="card">
-          <div class="content">
-            <h3 class="GTITLE">Dino 3d run</h3>
-            <div class="imgBx"><img class="GIMG" src="./img/gameTREX.webp" alt=""></div>
-            <div class="containerBx">
-              <div class="textContainer">
-              <p  class="GDESC">Всеми любимый динозаврик из браузера Chrome теперь в 3д.
-                Насладись игрой пересекая бесконечную, но красивую пустыню.
-                Не украл у хауди хо, а адаптировал ☝</p>
-              </div>
-            </div>
-          </div>
-          <a class="GBUTTON" href="https://play.google.com/store/apps/details?id=com.SosGamesCompany.Trexrunner">Download</a>
-        </div>
-        
-      </div>
-    </section>
-    <section>
-      <div class="container">
-        <div class="card">
-          <div class="content">
-            <h3 class="GTITLE">Зомби: Hot Wave</h3>
-            <div class="imgBx"><img class="GIMG" src="./img/gameZHW.webp" alt=""></div>
-            <div class="containerBx">
-              <div class="textContainer">
-              <p class="GDESC">В этой невероятно атмосферной игре, ты должен будешь выжить среди кучи страшных и опасных зомби. Твоя задача спасать беззащитных людей, находить разные припасы. Гляди в оба!
-              </p>
-              </div>
-            </div>
-          </div>
-          <a class="GBUTTON" href="https://play.google.com/store/apps/details?id=com.SosGames.SUS">Download</a>
-        </div>
-        
-      </div>
-    </section>
-  
-    <div class="center-con cc2" onclick="leftArrow()">
-      <div class="round">
-          <span></span>
-          <span></span>
-      </div>
-  </div>
-  </div>
-    <script src="./js/main.js"></script>
-    <script src="./js/gameScroll.js"></script>
-  </body>
+    <script src="./scripts/three.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.js"></script>
+    <script src="./scripts/GLTFLoader.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
 </html>
