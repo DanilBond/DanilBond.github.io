@@ -72,22 +72,30 @@ const scene = new THREE.Scene();
 
         switch(Step_1_Id){
             case 0:
+			if(step_1 != null && step_1_2 != null){
                 step_1.visible = true;
                 step_1_2.visible = false;
+			}
             break;
             case 1:
+			if(step_1 != null && step_1_2 != null){
                 step_1.visible = false;
                 step_1_2.visible = true;
+			}
             break;
         }
         switch(Step_2_Id){
             case 0:
+			if(step_2 != null && step_2_2 != null){
                 step_2.visible = true;
                 step_2_2.visible = false;
+			}
             break;
             case 1:
+			if(step_2 != null && step_2_2 != null){
                 step_2.visible = false;
                 step_2_2.visible = true;
+			}
             break;
         }
 
